@@ -669,6 +669,38 @@ body {
 /* ==========================================================================
    Photo upload
    ========================================================================== */
+.photo-rule {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 12px 13px;
+    border-radius: var(--radius-sm);
+    background: var(--navy-100);
+    border: 1.5px solid var(--navy-500);
+    margin-bottom: 14px;
+}
+
+.photo-rule svg {
+    width: 20px;
+    height: 20px;
+    flex: none;
+    color: var(--navy-700);
+    margin-top: 1px;
+}
+
+.photo-rule__title {
+    margin: 0 0 2px;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--navy-900);
+}
+
+.photo-rule__desc {
+    margin: 0;
+    font-size: 12px;
+    color: var(--ink-600);
+}
+
 .dropzone {
     border: 1.8px dashed var(--navy-500);
     border-radius: var(--radius-md);

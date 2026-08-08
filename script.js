@@ -34,6 +34,7 @@ const state = {
     kategori: "",
     latitude: null,
     longitude: null,
+    link_lokasi: "",
     potensi: "",
     kondisi: "",
     permasalahan: "",
@@ -190,8 +191,17 @@ function validateStep(step) {
     }
 
     if (step === 4) {
+        state.link_lokasi = document.getElementById("linkLokasi").value.trim();
+
         if (state.latitude === null || state.longitude === null) {
             showFieldError("gps", "Ambil titik lokasi GPS sebelum melanjutkan.");
+            valid = false;
+        }
+        if (!state.link_lokasi) {
+            showFieldError("linkLokasi", "Link lokasi Google Maps wajib diisi.");
+            valid = false;
+        } else if (!/^https?:\/\//i.test(state.link_lokasi)) {
+            showFieldError("linkLokasi", "Link harus diawali dengan http:// atau https://");
             valid = false;
         }
     }
@@ -231,7 +241,7 @@ function validateAllSteps() {
 /* ---------------------------------------------------------------------------
    Live-clear errors while typing
 --------------------------------------------------------------------------- */
-["namaSurveyor", "noWhatsapp", "kelompokKkm", "desa", "dusun", "namaObjek", "kategori", "potensi", "kondisi"]
+["namaSurveyor", "noWhatsapp", "kelompokKkm", "desa", "dusun", "namaObjek", "kategori", "linkLokasi", "potensi", "kondisi"]
     .forEach((id) => {
         const el = document.getElementById(id);
         if (el) el.addEventListener("input", () => clearFieldError(id));
@@ -372,6 +382,7 @@ function renderSummary() {
         ["Nama Objek", state.nama_objek],
         ["Kategori", state.kategori],
         ["Koordinat", `${state.latitude?.toFixed(6)}, ${state.longitude?.toFixed(6)}`, "mono"],
+        ["Link Lokasi", state.link_lokasi],
         ["Deskripsi", state.potensi],
         ["Kondisi", state.kondisi],
         ["Permasalahan", state.permasalahan || "\u2014"],
@@ -446,6 +457,7 @@ async function insertSurveyRow(fotoUrls) {
         kategori: state.kategori,
         latitude: state.latitude,
         longitude: state.longitude,
+        link_lokasi: state.link_lokasi,
         potensi: state.potensi,
         kondisi: state.kondisi,
         permasalahan: state.permasalahan || null,
@@ -492,6 +504,7 @@ btnEntriBaru.addEventListener("click", () => {
     state.nama_surveyor = state.no_whatsapp = state.kelompok_kkm = "";
     state.desa = state.dusun = state.nama_objek = state.kategori = "";
     state.latitude = state.longitude = null;
+    state.link_lokasi = "";
     state.potensi = state.kondisi = state.permasalahan = "";
     state.photos.forEach((p) => URL.revokeObjectURL(p.previewUrl));
     state.photos = [];

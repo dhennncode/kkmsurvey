@@ -193,6 +193,7 @@
                                 <option value="Pemakaman">Pemakaman</option>
                                 <option value="Permukiman">Permukiman</option>
                                 <option value="Pertahanan dan Keamanan">Pertahanan dan Keamanan</option>
+                                <option value="Lainnya">Lainnya</option>
                             </select>
                         </div>
                         <p class="field__error" id="err-kategori"></p>
@@ -252,6 +253,15 @@
                             </div>
                         </div>
                         <p class="field__error" id="err-gps"></p>
+
+                        <div class="field">
+                            <label for="linkLokasi">Link Lokasi Google Maps <span class="req">*</span></label>
+                            <input type="text" id="linkLokasi" name="link_lokasi"
+                                placeholder="Tempel link dari aplikasi Google Maps di sini">
+                            <p class="field__hint">Buka Google Maps di HP, tekan lama titik lokasi objek, lalu ketuk
+                                "Bagikan" dan salin (copy) link-nya ke sini.</p>
+                            <p class="field__error" id="err-linkLokasi"></p>
+                        </div>
                     </div>
 
                     <div class="form-card__nav">
@@ -321,6 +331,18 @@
                             <p>1&ndash;3 foto, format JPG/PNG, maksimal 5MB per foto.</p>
                         </div>
                     </header>
+
+                    <div class="photo-rule">
+                        <svg viewBox="0 0 20 20" fill="none">
+                            <rect x="2.5" y="6" width="15" height="8" rx="1.4" stroke="currentColor"
+                                stroke-width="1.4" />
+                        </svg>
+                        <div>
+                            <p class="photo-rule__title">Foto wajib landscape (horizontal), rasio 16:9</p>
+                            <p class="photo-rule__desc">Putar HP kamu ke posisi mendatar saat memotret objek, jangan
+                                potret dalam posisi tegak/potret.</p>
+                        </div>
+                    </div>
 
                     <div class="dropzone" id="dropzone" tabindex="0" role="button"
                         aria-label="Pilih foto untuk diunggah">
