@@ -24,7 +24,11 @@
             <div class="duty-card__stripe"></div>
             <div class="duty-card__body">
                 <div class="duty-card__crest" aria-hidden="true">
-                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Taruh file logo KKN kamu (misal logo-kkn.png) di folder yang sama
+                         dengan index.html. Gambar ini otomatis menggantikan ikon default. -->
+                    <img class="duty-card__crest-img" src="logo-kkn.png" alt=""
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <svg style="display:none" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5" />
                         <path d="M8 30C13 24 18 20 24 20C30 20 35 24 40 30" stroke="currentColor" stroke-width="1.5"
                             stroke-linecap="round" />
@@ -176,14 +180,20 @@
                         <div class="select-wrap">
                             <select id="kategori" name="kategori">
                                 <option value="" disabled selected>Pilih kategori&hellip;</option>
-                                <option value="Wisata Alam">Wisata Alam</option>
-                                <option value="Wisata Sejarah/Budaya">Wisata Sejarah/Budaya</option>
-                                <option value="Pertanian/Perkebunan">Pertanian/Perkebunan</option>
-                                <option value="Peternakan">Peternakan</option>
-                                <option value="Kerajinan/UMKM">Kerajinan/UMKM</option>
-                                <option value="Pertambangan/Migas">Pertambangan/Migas</option>
-                                <option value="Infrastruktur">Infrastruktur</option>
-                                <option value="Lainnya">Lainnya</option>
+                                <option value="Bangunan">Bangunan</option>
+                                <option value="Industri">Industri</option>
+                                <option value="Olahraga">Olahraga</option>
+                                <option value="Pariwisata Seni dan Budaya">Pariwisata Seni dan Budaya</option>
+                                <option value="Pemerintahan">Pemerintahan</option>
+                                <option value="Pendidikan">Pendidikan</option>
+                                <option value="Peribadatan">Peribadatan</option>
+                                <option value="Sarana Kesehatan">Sarana Kesehatan</option>
+                                <option value="Sosial">Sosial</option>
+                                <option value="Transportasi">Transportasi</option>
+                                <option value="Perekonomian/Perdagangan">Perekonomian/Perdagangan</option>
+                                <option value="Pemakaman">Pemakaman</option>
+                                <option value="Permukiman">Permukiman</option>
+                                <option value="Pertahanan dan Keamanan">Pertahanan dan Keamanan</option>
                             </select>
                         </div>
                         <p class="field__error" id="err-kategori"></p>
@@ -270,9 +280,9 @@
                     </header>
 
                     <div class="field">
-                        <label for="potensi">Potensi <span class="req">*</span></label>
+                        <label for="potensi">Deskripsi <span class="req">*</span></label>
                         <textarea id="potensi" name="potensi" rows="4"
-                            placeholder="Apa potensi objek ini bagi desa?"></textarea>
+                            placeholder="Jelaskan objek ini dan potensinya bagi desa"></textarea>
                         <p class="field__error" id="err-potensi"></p>
                     </div>
 

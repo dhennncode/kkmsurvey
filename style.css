@@ -142,6 +142,14 @@ body {
     height: 26px;
 }
 
+.duty-card__crest-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
 .duty-card__eyebrow {
     margin: 0 0 6px;
     font-family: var(--font-mono);
@@ -631,6 +639,10 @@ body {
     animation: cardIn 0.3s ease;
 }
 
+.gps-coords[hidden] {
+    display: none;
+}
+
 .gps-coords__item {
     padding: 12px;
     border-radius: var(--radius-sm);
@@ -820,6 +832,10 @@ body {
     color: var(--error);
     margin-bottom: 16px;
     animation: cardIn 0.25s ease;
+}
+
+.submit-banner[hidden] {
+    display: none;
 }
 
 .submit-banner svg {

@@ -200,7 +200,7 @@ function validateStep(step) {
         state.potensi = document.getElementById("potensi").value.trim();
         state.kondisi = document.getElementById("kondisi").value.trim();
         state.permasalahan = document.getElementById("permasalahan").value.trim();
-        need("potensi", state.potensi, "Potensi wajib diisi.");
+        need("potensi", state.potensi, "Deskripsi wajib diisi.");
         need("kondisi", state.kondisi, "Kondisi wajib diisi.");
     }
 
@@ -372,7 +372,7 @@ function renderSummary() {
         ["Nama Objek", state.nama_objek],
         ["Kategori", state.kategori],
         ["Koordinat", `${state.latitude?.toFixed(6)}, ${state.longitude?.toFixed(6)}`, "mono"],
-        ["Potensi", state.potensi],
+        ["Deskripsi", state.potensi],
         ["Kondisi", state.kondisi],
         ["Permasalahan", state.permasalahan || "\u2014"],
         ["Jumlah Foto", `${state.photos.length} foto`],
