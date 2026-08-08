@@ -9,8 +9,8 @@
    5. JANGAN pernah menempel "service_role" key di sini — kunci itu hanya
       boleh dipakai di server, bukan di kode yang berjalan di browser.
    ========================================================================== */
-const SUPABASE_URL = "https://xxxxxxxxxxxxxxxxxxxx.supabase.co"; // <-- GANTI dengan Project URL kamu
-const SUPABASE_ANON_KEY = "eyJhbGciOi..."; // <-- GANTI dengan anon public key kamu
+const SUPABASE_URL = "https://opvcdgzwiriaafcodocn.supabase.co"; // <-- GANTI dengan Project URL kamu
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9wdmNkZ3p3aXJpYWFmY29kb2NuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYyMDg2MDMsImV4cCI6MjEwMTc4NDYwM30.jD6E_M_-GsVrDJBAJW_mrhJDDn6np41aUouiOafSnoU"; // <-- GANTI dengan anon public key kamu
 
 const STORAGE_BUCKET = "survey-photos";
 const TABLE_NAME = "survey_data";

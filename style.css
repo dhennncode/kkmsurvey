@@ -856,6 +856,10 @@ body {
     animation: fadeIn 0.2s ease;
 }
 
+.overlay[hidden] {
+    display: none;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
